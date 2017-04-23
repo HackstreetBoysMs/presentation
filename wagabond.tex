@@ -1,0 +1,215 @@
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+
+\documentclass{beamer}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% There are many different themes available for Beamer. A comprehensive
+% list with examples is given here:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+% You can uncomment the themes below if you would like to use a different
+% one:
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{boxes}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+\usetheme{default}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+\title{Wagabond destination finding app}
+
+
+\author{Dali Szilard, Szanto Zoltan, Gergely Patka}
+
+\date{HackTGM, 2017}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+% Let's get started
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+% Section and subsections will appear in the presentation overview
+% and table of contents.
+
+%%% bevezeto: mi a problema-> milyen megoldasunk van ra
+\section{Introduction}
+
+\subsection{Where to go to have fun?}
+
+\begin{frame}{Where to go to have fun?}{You could always explore some more.}
+
+  \begin{itemize}
+  \item {Where to go for a drink?    
+  }
+  \item {Where to go for a nice meal?   
+  }
+  \item {New place or your old town, you could always explore some more.
+   
+  }
+  \end{itemize}
+\end{frame}
+
+\subsection{Our solution}
+
+\begin{frame}{Wagabond the city exploring app}{Our solution for your problem}
+  \begin{itemize}
+  \item {Multiplatform app for ease of use
+  }
+  \item {Explore pubs, coffe shops, restaurants, museums, etc.
+  }
+  \end{itemize}
+\end{frame}
+
+%%% technikai megoldas... nagyvonalakban az app-rol; mi tortenik a hatterben (fuzzy.ai, php, backend stb)
+\section{What is under the hood?}
+
+\subsection{Construction of the system}
+
+\begin{frame}{Construction of the system}
+  \begin{itemize}
+  \item {MVC    
+  }
+  \item {Active Record     
+  }
+  \item {Composer package management system   
+  }
+  \item {Android client   
+  }
+
+  \end{itemize}
+\end{frame}
+
+\subsection{Used technologies}
+
+\begin{frame}{Used technologies}{The construction blocks of the app}
+  \begin{itemize}
+  \item {fuzzy.ai: a fuzzy logic API that can learn using user feedback
+  }
+  \item {Google maps API: to locate the places, and you   
+  }
+  \item{Google Fused Location API: to know where you are
+  }
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Fuzzy logic powered by fuzzy.ai}{The rules to find a suitable location}
+  \begin{itemize}
+  \item {distance (0.99): How far are you from the place 
+  }
+  \item {sponsor (0.2): Our partners can get a slightly better score
+  }
+  \item {rating value (0.3): How expensive is the place
+  }
+  \item {rating location (0.4): How nice is the place
+  }
+  \item {rating service (0.4): How good is the service
+  }
+  \item {rating cleanliness (0.3): How clean is it?
+  }
+  \end{itemize}
+\end{frame}
+
+%%% ez mar a vege... 
+\section{Further development potential}
+
+\section{Demo}
+
+\subsection{Wagabond App demo}
+
+\begin{frame}{Wagabond App demo}
+\end{frame}
+
+\subsection{Further features}
+
+\begin{frame}{Further features}{Further features that we want to include}
+  \begin{itemize}
+  \item {More options for places    
+  }
+  \item {Web interface   
+  }
+  \item {User feedback for the locations   
+  }
+  \item {Machine learning to improve results   
+  }
+  \end{itemize}
+\end{frame}
+
+\subsection{Monetization potential}
+
+\begin{frame}{}
+  \begin{itemize}
+  \item {Partnership with pubs, restaurants, etc.    
+  }
+  \item {New section in the App for upcoming event (payed by advertisers)   
+  }
+  \end{itemize}
+\end{frame}
+
+
+% summarize the shit
+\section*{Summary}
+
+\begin{frame}{Summary}
+  \begin{itemize}
+  \item
+    City exploring app
+  \item
+    Potential for monetization
+  \item
+    Continuous integration "like" with github webhooks, Composer and database migration
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Thank you for the attention}
+\end{frame}
+
+\end{document}
+
+
